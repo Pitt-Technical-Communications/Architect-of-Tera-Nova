@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .content h1 {
+            font-size: 4em;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 0.5em;
+        }
+
+        .content p {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        .content a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .content a:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="Sunrise Scene.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>Architect of Terranova</h1>
+        <p>Help construct an Earth-like planet</p>
+        <a href="1_ Mission.html" target="1_Mission.html">Join Us Now!</a>
+    </div>
+</body>
+</html>

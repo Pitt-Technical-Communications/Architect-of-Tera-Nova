@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Determining Planet Size</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose the Location of your Planet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            border: 2px solid #ccc;
+        }
+        .map-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .clickable-zone {
+            position: absolute;
+            border-radius: 100%;
+            background-color: transparent; /* Highlight for correct zone */
+            border: transparent;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div>   <center><p style="color: white; font-size: 20px; font-family: Arial, sans-serif;">The habitable zone is the region around a star where conditions allow a planet to sustain liquid water on its surface. If a planet is too close to its star, the water would evaporate due to intense heat; if it’s too far, the water would freeze. On many maps, the habitable zone is often highlighted in green.</p></center>
+
+    <center>
+        <img src="Pic.png" alt="A beautiful mountain landscape" width="500" height="" title="Mountain Landscape" style="margin: 50px;" />
+    </center>
+
+    <center><p style="color: white; font-size: 20px; font-family: Arial, sans-serif;">To host life, it is believed that liquid water is necessary. So, where should your planet be? </p>
+
+        <p style="color: black; font-size: 20px; font-family: Arial, sans-serif;">The habitable zone is the region around a star where conditions allow a planet to sustain liquid water on its surface. If a planet is too close to its star, the water would evaporate due to intense heat; if it’s too far, the water would freeze. On many maps, the habitable zone is often highlighted in green.</p>
+
+    </center> <style></style></div>
+    <h1 style="text-align: center;">Choose the Location of your Planet</h1>
+    <p style="text-align: center;">Click a region in the star system!</p>
+    <div class="map-container">
+        <img src="habitablezone.png" alt="Habitable Zone Map">
+        <!-- Correct clickable zone -->
+        <div class="clickable-zone" style="top: 32%; left: 50%; width: 60px; height: 35px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 72%; left: 50%; width: 60px; height: 35px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 50%; left: 67%; width: 35px; height: 60px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 50%; left: 34%; width: 35.5px; height: 60px;" onclick="showMessage(true)"></div>
+
+        <div class="clickable-zone" style="top: 60%; left: 34.5%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div><div class="clickable-zone" style="top: 56%; left: 34%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 45%; left: 34%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div><div class="clickable-zone" style="top: 41%; left: 36%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 42%; left: 65%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 44%; left: 66%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 64%; left: 36.5%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 64%; left: 64%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 60%; left: 65.75%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 55.5%; left: 67%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 68.5%; left: 60%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 68.5%; left: 40.5%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 66.75%; left: 39%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 66.75%; left: 62%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 70%; left: 57%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 70%; left: 43%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 71.5%; left: 54%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 71.5%; left: 46%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 38%; left: 63%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 38%; left: 38%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 35.5%; left: 40%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 35.5%; left: 60.75%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 33.25%; left: 58%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 33.25%; left: 42.75%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 32%; left: 46%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <div class="clickable-zone" style="top: 32%; left: 54.5%; width: 35.5px; height: 35.5px;" onclick="showMessage(true)"></div>
+        <!-- Incorrect clickable zones -->
+        <div class="clickable-zone" style="top: 50%; left: 19%; width: 150px; height: 300px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 20%; left: 30%; width: 150px; height: 188px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 81%; left: 29%; width: 150px; height: 179px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 20%; left: 50%; width: 300px; height: 100px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 24%; right: 4%; width: 150px; height: 160px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 75%; left: 75%; width: 150px; height: 180px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 84%; left: 53%; width: 400px; height: 100px;" onclick="showMessage(false)"></div>
+        <div class="clickable-zone" style="top: 53%; left: 81%; width: 150px; height: 300px;" onclick="showMessage(false)"></div>
+        
+    </div>
+    <div class="message" id="message"></div>
+
+    <script>
+        function showMessage(isCorrect) {
+            const messageDiv = document.getElementById('message');
+            if (isCorrect) {
+                window.location.href = "6.1_finalexplanation.html"; // ;
+            } else {
+                messageDiv.textContent = "This is incorrect. Try again!";
+                messageDiv.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

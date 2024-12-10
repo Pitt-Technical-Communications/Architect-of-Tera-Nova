@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mission</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">  
+<!--Creates 3s fade-in animation-->
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video with Button</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        video {
+            width: 100%;
+            max-height: 90%;
+        }
+        #action-button {
+            display: none; /* Hide the button initially */
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #action-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <video id="video" controls>
+        <source src="IntroScene.mp4" type="video/mp4">
+        <source src="IntroScene.mp4" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    <button id="action-button" onclick="location.href='2_Star_selection.html';">Next 
+    </button>
+
+    <script>
+        // Select video and button elements
+        const video = document.getElementById('video');
+        const button = document.getElementById('action-button');
+
+        // Listen for the 'ended' event on the video
+        video.addEventListener('ended', () => {
+            button.style.display = 'block'; // Show the button
+        });
+
+        // Optional: Add functionality to the button
+        button.addEventListener('click', () => {
+            alert('Your mission starts now!');
+        });
+    </script>
+</body>
+</html>

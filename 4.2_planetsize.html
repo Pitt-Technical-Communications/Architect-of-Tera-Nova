@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Determining Planet Size</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(starrynight.gif);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .result.correct {
+            color: green;
+        }
+        .result.incorrect {
+            color: red;
+        }
+    </style>
+</head>
+
+<div><center>
+    <img src="Earthsize.png" alt="A beautiful mountain landscape" width="300" height="" title="Mountain Landscape" style="margin: 50px;" />
+
+</center</div>
+
+
+
+<div class="container">
+        <h1>Input value for your Planet's mass</h1>
+        <p>Enter a value between 0.1-10 (in 10<sup>24</sup> kg :</p>
+        <input type="number" id="userInput" placeholder="Enter a number" step="0.1" min="0.1" max="10">
+        <button onclick="checkValue()">Check!</button>
+        <div id="result" class="result"></div>
+        <button onclick="window.location.href='4_planetsize.html'">Review information!</button>
+    </div>
+
+    <script>
+        // Parameters for correctness
+        const correctRange = { min: 0.16146, max: 100 };
+
+        // Function to check the input value
+        function checkValue() {
+            const userInput = document.getElementById("userInput").value;
+            const resultDiv = document.getElementById("result");
+
+            if (userInput >= correctRange.min && userInput <= correctRange.max) {
+                window.location.href = "5_atmoshpere.html"; // ;
+            } else {
+                // Redirect to another page if the answer is wrong
+                resultDiv.textContent = "Incorrect! Review the information above.";
+                resultDiv.className = "result incorrect"; // Replace with your desired URL
+            }
+        }
+    </script>
+</body>
+</html>

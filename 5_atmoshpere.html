@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Planet's Atmosphere</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+<!--Refreshes index.html after 180 seconds-->
+  <meta http-equiv="refresh" content="180;url=index.html">
+<!--Creates 3s fade-in animation-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url(starrynight.gif);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .parameter {
+            margin: 20px 0;
+        }
+        .parameter label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .parameter input[type="range"] {
+            width: 100%;
+        }
+        .parameter span {
+            float: right;
+            font-size: 14px;
+            color: #555;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+       <center><p style="color: white; font-size: 20px; font-family: Arial, sans-serif;">Stars constantly emit radiation, and a planet’s atmosphere serves as its first line of defense. Harmful radiation, such as gamma rays and ultraviolet rays, can be detrimental to living organisms, making an atmosphere essential for a planet capable of supporting life.</p>
+       </center>
+    <center>
+        <img src="atmosphere_protetct.png" alt="A beautiful mountain landscape" width="500" height="" title="Mountain Landscape" style="margin: 50px;" />
+    </center>
+
+    <center><p style="color: white; font-size: 20px; font-family: Arial, sans-serif;">Earth’s atmosphere consists of approximately 78% nitrogen, 21% oxygen, and 1% argon and trace gases (though these values can fluctuate). Given your mission to create an Earth-like planet, what should your planet’s atmospheric composition be?</p>
+    </center>
+</div>
+
+    <div class="container">
+        <h1>Atmosphere Maker</h1>
+        <p>Adjust the sliders to set the appropriate percentages of gases for your planet's atmosphere.</p>
+        <div id="parameters">
+            <div class="parameter">
+                <label for="param1">Nitrogen: <span id="value1">0</span></label>
+                <input type="range" id="param1" min="0" max="100" value="0" oninput="updateValue(1)">
+            </div>
+            <div class="parameter">
+                <label for="param2">Oxygen: <span id="value2">0</span></label>
+                <input type="range" id="param2" min="0" max="100" value="0" oninput="updateValue(2)">
+            </div>
+            <div class="parameter">
+                <label for="param3">Argon and others: <span id="value3">0</span></label>
+                <input type="range" id="param3" min="0" max="100" value="0" oninput="updateValue(3)">
+            </div>
+        </div>
+        <button onclick="checkParameters()">Check Answer</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        // Correct target values for the parameters
+        const targetValues = [78, 21, 1];
+
+        // Function to update the displayed slider values
+        function updateValue(index) {
+            const value = document.getElementById(`param${index}`).value;
+            document.getElementById(`value${index}`).textContent = value;
+        }
+
+        // Function to check if the parameters match the target values
+        function checkParameters() {
+            const param1 = parseInt(document.getElementById("param1").value) || 0;
+            const param2 = parseInt(document.getElementById("param2").value) || 0;
+            const param3 = parseInt(document.getElementById("param3").value) || 0;
+
+            // Combine all parameters into an array for comparison
+            const userValues = [param1, param2, param3];
+            
+            // Compare user inputs to the target values
+            const isCorrect = userValues.every((val, index) => val === targetValues[index]);
+
+            // Get the result display element
+            const resultDiv = document.getElementById("result");
+
+            if (isCorrect) {
+                window.location.href = "6_habitablezone.html"; // ;
+            } else {
+                resultDiv.textContent = "Incorrect! Try again. Ensure all values are correct.";
+                resultDiv.className = "result incorrect";
+            }
+        }
+    </script>
+</body>
+</html>
+
