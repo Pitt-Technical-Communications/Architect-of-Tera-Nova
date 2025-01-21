@@ -78,6 +78,24 @@
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
         }
+
+        .content a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .content a:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: black;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -94,26 +112,8 @@
         <p></p>
     </div>
 
-    <!-- Image Container -->
-    <div class="image-container">
-        <!-- Rocky Planet -->
-        <div class="image-box">
-            <img src="Newspaper.png" alt="Astronomy News">
-            <a href="https://science.nasa.gov/category/universe/exoplanets/super-earth/">
-                <button>Explore Exoplanets</button>
-            </a>
-            <div class="text-box"><center>Cool Astronomy News</center></div>
-        </div>
-        
-        <!-- Gas Planet -->
-        <div class="image-box">
-            <img src="community_initiatives.png" alt="Gas Planet">
-            <a href="7.1_community.html">
-                <button>Explore community initiatives</button>
-            </a>
-            <div class="text-box"><center>Community Initiatives</center></div>
-        </div>
-    </div>
+   
+
 
     <!-- Message Box -->
     <div id="message-box"></div>
@@ -125,5 +125,8 @@
             messageBox.style.color = 'red'; // Set the font color to red
         }
     </script>
+    <a href="index.html">
+    <button type="button">Return to Beginning!</button>
+        </a>
 </body>
 </html>
